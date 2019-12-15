@@ -21,21 +21,22 @@
         <item
             android:id="@+id/nav_nights"
             android:title="Nights"
-            android:icon="@drawable/ic_star_black_24dp" />
+            android:icon="@drawable/ic_star_black_24dp"
+            android:visible="false"/>
 
         <item
             android:id="@+id/nav_speakers"
             android:title="Speakers"
             android:icon="@drawable/ic_speaker_black_24dp" />
 
-        <!--item
+        <item
             android:id="@+id/nav_maps"
             android:title="Maps"
-            android:icon="@drawable/ic_maps_black_24dp" /-->
+            android:icon="@drawable/ic_maps_black_24dp" />
 
         <item
             android:id="@+id/nav_about_event"
-            android:title="About Quark'19"
+            android:title="About NFCFA 2019"
             android:icon="@drawable/ic_about_event_black_24dp" />
 
         <item

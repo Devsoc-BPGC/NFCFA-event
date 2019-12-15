@@ -45,7 +45,7 @@ public class TimerCardFragment extends Fragment
         formatter.setLenient(false);
 
 
-        String endTime = "31.01.2019, 17:30:00";
+        String endTime = "20.12.2019, 17:30:00";
         long milliseconds=0;
         Date endDate;
         try {

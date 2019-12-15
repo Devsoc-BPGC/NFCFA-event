@@ -125,11 +125,11 @@ public class HomeActivity extends AppCompatActivity implements
                     getString(R.string.timeline)
             );
         }
-        /*if (BuildConfig.shouldShowMapOnHome) {
+        if (BuildConfig.shouldShowMapOnHome) {
             fragmentTransaction.add(R.id.ll_home,
                     new MapCardFragment(),
                     "map");
-        }*/
+        }
 
         if (BuildConfig.sponsors){
             fragmentTransaction.add(R.id.ll_home,

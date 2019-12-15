@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.macbitsgoa.events"
+        applicationId "com.macbitsgoa.nfcfa"
         manifestPlaceholders = [deepLinkDomain: "example.com"]
         minSdkVersion 21
         targetSdkVersion 28
@@ -21,19 +21,19 @@ android {
         buildConfigField "boolean", "eateries", "true"
         resValue "bool", "eateries", "true"
         buildConfigField "boolean", "feed", "true"
-        resValue "bool", "feed", "true"
+        resValue "bool", "feed", "false"
         buildConfigField "boolean", "shouldShowMapOnHome", "true"
-        buildConfigField "boolean", "timeline", "false"
+        buildConfigField "boolean", "timeline", "true"
         buildConfigField "boolean", "sponsors", "true"
-        buildConfigField "boolean", "festmerch", "true"
+        buildConfigField "boolean", "festmerch", "false"
         buildConfigField "boolean", "speakers", "true"
-        buildConfigField "boolean", "nights", "true"
+        buildConfigField "boolean", "nights", "false"
         buildConfigField "boolean", "timer", "true"
-        buildConfigField "int", "eventDuration", "4" // days
-        buildConfigField "String", "startDate", "\"30,05,2018\"" // "dd,mm,yyyy"
-        buildConfigField "String", "timerEndDate", "\"31.01.2019, 17:30:00\""
-        buildConfigField "String", "eventName", "\"Quark'19\""
-        buildConfigField "String", "eventTheme", "\"Cognitive Overdrive\""
+        buildConfigField "int", "eventDuration", "3" // days
+        buildConfigField "String", "startDate", "\"20,12,2019\"" // "dd,mm,yyyy"
+        buildConfigField "String", "timerEndDate", "\"22.12.2019, 17:30:00\""
+        buildConfigField "String", "eventName", "\"NFCFA 2019\""
+        buildConfigField "String", "eventTheme", "\"National Conference New Frontiers in Chemistry - From Fundamentals to Applications \""
         buildConfigField "String", "startDateFormat", "\"dd,MM,yyyy\""
         buildConfigField "String", "timelineTabDateFormat", "\"d MMM\""
         buildConfigField "String", "sessionTimeFormat", "\"h:m\""
@@ -47,7 +47,6 @@ android {
             ext.enableCrashlytics = false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            applicationIdSuffix '.debug'
             versionNameSuffix '-debug'
         }
         release {
