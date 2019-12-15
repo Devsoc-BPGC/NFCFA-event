@@ -3,9 +3,9 @@
     android:opacity="opaque"
     >
     <item android:drawable="@drawable/bg2" />
-    <!--<item>
+    <item
+        android:gravity="center">
         <bitmap
-            android:gravity="center"
             android:src="@drawable/bitslogo" />
-    </item>-->
+    </item>
 </layer-list>

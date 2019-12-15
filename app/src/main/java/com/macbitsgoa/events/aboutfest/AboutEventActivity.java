@@ -47,9 +47,8 @@ public class AboutEventActivity extends AppCompatActivity {
             finish();
         }
         final AboutFest data = new Gson().fromJson(aboutFestData, AboutFest.class);
-        ((SimpleDraweeView) findViewById(R.id.sdv_event_logo)).setImageURI(data.logoUrl);
+        //((SimpleDraweeView) findViewById(R.id.sdv_event_logo)).setImageURI(data.logoUrl);
         ((TextView) findViewById(R.id.tv_event_desc)).setText(data.description);
-        ((RecyclerView) findViewById(R.id.rv_organisers))
-                .setAdapter(new OrganisersAdapter(data.organisers));
+        //((RecyclerView) findViewById(R.id.rv_organisers)).setAdapter(new OrganisersAdapter(data.organisers));
     }
 }

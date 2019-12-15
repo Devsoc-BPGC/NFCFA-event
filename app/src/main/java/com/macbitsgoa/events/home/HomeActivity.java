@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements
         }
         // example use of build config variable
 
-        if(BuildConfig.timer) {
+        if (BuildConfig.timer) {
             fragmentTransaction.add(R.id.ll_home,
                     new TimerCardFragment(),
                     "timer"
@@ -107,7 +107,7 @@ public class HomeActivity extends AppCompatActivity implements
             );
         }*/
 
-        if (BuildConfig.festmerch){
+        if (BuildConfig.festmerch) {
             fragmentTransaction.add(R.id.ll_home,
                     new com.macbitsgoa.events.festmerch.FestMerchFragment(),
                     "fest merchandise");
@@ -131,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements
                     "map");
         }
 
-        if (BuildConfig.sponsors){
+        if (BuildConfig.sponsors) {
             fragmentTransaction.add(R.id.ll_home,
                     new SponsorsFragment(),
                     "sponsors");
@@ -181,18 +181,35 @@ public class HomeActivity extends AppCompatActivity implements
                 shareIntent.setType(MIME_TYPE_PLAINTEXT);
                 startActivity(Intent.createChooser(shareIntent,
                         getString(R.string.choose_share_medium_prompt)));
+
                 break;
             }
 
-            /*case (R.id.nav_maps): {
-                final Intent mapIntent = new Intent(HomeActivity.this, MapsActivity.class);
-                startActivity(mapIntent);
+            case (R.id.nav_goa): {
+                final CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+                intent.launchUrl(HomeActivity.this, Uri.parse("https://www.justdial.com/Goa/Restaurants-in-Zuarinagar"));
+                break;
+            }
+
+            case (R.id.nav_events): {
+                final CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+                intent.launchUrl(HomeActivity.this, Uri.parse("https://www.bits-goa.ac.in/NFCFA2019/goal.html"));
+
+                break;
+            }
+            case (R.id.nav_maps): {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393"));
+                startActivity(browserIntent);
+
+                /*final Intent mapIntent = new Intent(HomeActivity.this, MapsActivity.class);
+                startActivity(mapIntent);*/
                 break;
 
-            }*/
+            }
 
             case (R.id.nav_registration): {
-                final CustomTabsIntent intent=new CustomTabsIntent.Builder().build();
+                final CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
                 intent.launchUrl(HomeActivity.this, Uri.parse(EVENTS));
                 //Uri uri = Uri.parse(EVENTS);
                 //startActivity(new Intent(Intent.ACTION_VIEW, uri));
@@ -206,6 +223,7 @@ public class HomeActivity extends AppCompatActivity implements
             }
 
             case (R.id.nav_about_event): {
+                //https://www.bits-goa.ac.in/NFCFA2019/goal.html
                 startActivity(new Intent(HomeActivity.this, AboutEventActivity.class));
                 break;
             }
@@ -216,7 +234,12 @@ public class HomeActivity extends AppCompatActivity implements
             }
 
             case (R.id.nav_timeline): {
-                launchTimeLineActivity(this);
+                final CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+                intent.launchUrl(HomeActivity.this, Uri.parse("https://www.bits-goa.ac.in/NFCFA2019/Download/NFCFA2019_Program%20details_Final.pdf"));
+                /*Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.bits-goa.ac.in/NFCFA2019/Download/NFCFA2019_Program%20details_Final.pdf"));
+                startActivity(browserIntent);*/
+                //launchTimeLineActivity(this);
                 break;
             }
             case (R.id.nav_speakers): {

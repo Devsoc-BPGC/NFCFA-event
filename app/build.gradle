@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "com.macbitsgoa.nfcfa"
         manifestPlaceholders = [deepLinkDomain: "example.com"]
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 28
         versionCode 3
         versionName "1.0"
@@ -18,12 +18,12 @@ android {
         }
 
         // test build configuration variable
-        buildConfigField "boolean", "eateries", "true"
-        resValue "bool", "eateries", "true"
+        buildConfigField "boolean", "eateries", "false"
+        resValue "bool", "eateries", "false"
         buildConfigField "boolean", "feed", "true"
         resValue "bool", "feed", "false"
-        buildConfigField "boolean", "shouldShowMapOnHome", "true"
-        buildConfigField "boolean", "timeline", "true"
+        buildConfigField "boolean", "shouldShowMapOnHome", "false"
+        buildConfigField "boolean", "timeline", "false"
         buildConfigField "boolean", "sponsors", "true"
         buildConfigField "boolean", "festmerch", "false"
         buildConfigField "boolean", "speakers", "true"

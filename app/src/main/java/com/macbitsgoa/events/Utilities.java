@@ -20,6 +20,6 @@ public class Utilities {
     public static final String INS_Q = "https://www.instagram.com/bitsquark/";
     public static final String TW_Q = "https://twitter.com/bitsquark/";
     public static final String LI_Q = "https://twitter.com/bitsquark/";
-    public static final String EVENTS= "https://bits-quark.org/Quark-2019/events.html";
+    public static final String EVENTS= "https://www.bits-goa.ac.in/NFCFA2019/registration.html";
 
 }

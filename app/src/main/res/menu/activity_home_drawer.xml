@@ -10,12 +10,12 @@
 
         <item
             android:id="@+id/nav_events"
-            android:title="Events"
+            android:title="Goal"
             android:icon="@drawable/ic_event_black_24dp" />
 
         <item
             android:id="@+id/nav_timeline"
-            android:title="Timeline"
+            android:title="Program Timeline"
             android:icon="@drawable/ic_timeline_black_24dp" />
 
         <item
@@ -33,7 +33,10 @@
             android:id="@+id/nav_maps"
             android:title="Maps"
             android:icon="@drawable/ic_maps_black_24dp" />
-
+        <item
+            android:id="@+id/nav_goa"
+            android:title="Restaurants in Goa"
+            android:icon="@android:drawable/star_big_on" />
         <item
             android:id="@+id/nav_about_event"
             android:title="About NFCFA 2019"
